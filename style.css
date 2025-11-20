@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    
 }
 
 
@@ -515,6 +515,35 @@ section#projects h2 {
     text-align: center;
 }
 
+
+/* --- Filter Buttons --- */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #555;
+    background: #383838;
+    color: #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: #db5c5c;
+    background: #db5c5c;
+    color: #fff;
+    transform: translateY(-2px);
+}
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
