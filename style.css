@@ -1,0 +1,1050 @@
+/* --- Global Resets & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* AJOUTÉ : Pour le smooth scroll PARTOUT */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #f5f5f5; /* Fond très léger pour les sections claires */
+    color: #333; /* Couleur de texte par défaut pour les sections claires */
+    line-height: 1.6;
+
+}
+
+h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.5px;
+    color: #f1f1f1; /* Blanc pour le h1 sur fond sombre de #home */
+}
+
+h2 {
+    color: #db5c5c; /* Couleur d'accentuation principale */
+    margin-bottom: 1.5rem; /* Augmenté pour un meilleur espacement */
+    font-size: 2.2rem; /* Taille plus grande pour les titres de section */
+    text-align: center;
+}
+
+h3 {
+    color: #f1f1f1; /* Blanc cassé pour les h3 sur fond sombre */
+    margin-bottom: 1rem;
+    font-size: 1.6rem; /* Taille ajustée */
+    text-align: center;
+}
+
+h4 { /* Nouvelle règle pour les h4 */
+    font-size: 1.2rem;
+    color: #db5c5c;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+a {
+    color: #db5c5c; /* Couleur de lien par défaut, cohérente */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e06c6c; /* Couleur de lien au survol */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: #222; /* Fond très sombre */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px; /* Plus de padding pour la hauteur */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem; /* Plus d'espace entre les liens */
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 5px 0; /* Pour une zone de clic plus large */
+}
+
+nav a:hover,
+nav a.active {
+    color: #db5c5c;
+    transform: translateY(-2px); /* Léger effet au survol */
+}
+
+/* --- Section Base Styling --- */
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-top: 100px; /* Espace pour le header fixe */
+    padding-bottom: 5rem; /* Plus d'espace en bas de chaque section */
+    min-height: 90vh; /* S'assure que la section est suffisamment grande */
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Home Section --- */
+section#home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image/bg.jpg'); /* Opacité forte */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 100%; /* S'étend sur toute la largeur */
+    padding-top: 0; /* Pas de padding-top ici, le contenu est centré */
+    z-index: 0;
+    color: #f1f1f1; /* Texte par défaut blanc pour #home */
+}
+
+section#home h1 {
+    animation: fadeInUp 1s ease-out backwards;
+    color: #f1f1f1;
+    margin-bottom: 1rem;
+    font-size: 3.5rem; /* Plus grand pour le nom */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+section#home h2 {
+    font-size: 1.8rem; /* Taille ajustée */
+    color: #db5c5c;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+section#home .profile-pic {
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+section#home #Who {
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2.5rem;
+    border: 5px solid #db5c5c; /* Bordure plus épaisse */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4); /* Ombre plus prononcée */
+}
+
+#Who {
+    display: inline-block;
+    padding: 14px 28px; /* Plus grand */
+    margin-top: 3rem;
+    background-color: #db5c5c;
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#Who:hover {
+    background-color: #e06c6c;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* --- About Me Section --- */
+section#about {
+    background-color: #2c2c2c; /* Fond sombre */
+    color: #e0e0e0; /* Texte clair par défaut pour cette section */
+    max-width: 100%;
+}
+
+section#about h2 {
+    color: #db5c5c;
+    margin-bottom: 2.5rem;
+}
+
+section#about h3 {
+    color: #f1f1f1;
+}
+
+section#about p {
+    color: #e0e0e0;
+    line-height: 1.7; /* Améliore la lisibilité */
+    margin-bottom: 1.2rem;
+}
+
+section#about strong {
+    color: #ffffff; /* Blanc pur */
+}
+
+section#about em {
+    color: #ff9999; /* Rouge plus clair */
+}
+
+.intro {
+    background-color: #383838; /* Conteneur légèrement plus clair */
+    padding: 35px; /* Plus de padding */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Ombre plus profonde */
+    margin-bottom: 4rem; /* Plus d'espace */
+}
+
+/* Icônes de technologies */
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Plus d'espace entre les icônes */
+    margin: 3rem 0;
+    padding: 20px; /* Plus de padding */
+    background-color: #4a4a4a; /* Fond encore plus contrasté */
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3); /* Effet "incrusté" */
+}
+
+.tech-icons img {
+    height: 50px; /* Taille légèrement augmentée */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(40%) brightness(1.2); /* Plus de désaturation, légèrement plus clair */
+}
+
+.tech-icons img:hover {
+    transform: scale(1.2); /* Zoom plus prononcé */
+    filter: grayscale(0%) brightness(1); /* Couleurs vives au survol */
+}
+
+.image-scroll {
+    display: flex;
+    gap: 25px; /* Espace ajusté */
+    overflow-x: auto;
+    margin: 3rem 0; /* Plus d'espace */
+    padding-bottom: 10px; /* Pour éviter de couper la scrollbar */
+    scrollbar-width: none; /* Firefox */
+}
+.image-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+ 
+.image-scroll img {
+    width: 250px; /* Taille légèrement augmentée */
+    height: 160px; /* Taille légèrement augmentée */
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #555; /* Bordure plus épaisse */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.image-scroll img:hover {
+    transform: scale(1.03);
+    border-color: #db5c5c;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.social-media {
+    text-align: center;
+    padding: 30px; /* Plus de padding */
+    background-color: #383838; /* Conteneur légèrement plus clair */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-top: 4rem; /* Assure un bon espacement avec le contenu précédent */
+}
+
+.social-media h2, .social-media h3 {
+    color: #db5c5c;
+    margin-bottom: 1rem;
+}
+
+.social-media h3 {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+.sm {
+    display: inline-block;
+    margin: 20px; /* Plus d'espace entre les icônes */
+    width: 65px; /* Taille légèrement augmentée */
+    height: 65px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    vertical-align: middle;
+    filter: brightness(0.9) grayscale(0.2); /* Légère désaturation */
+}
+.sm:hover {
+    transform: scale(1.6); /* Zoom plus prononcé */
+    filter: brightness(1.2) grayscale(0); /* Luminosité et couleurs vives au survol */
+}
+
+#in { width: 95px; height: 95px; } /* Tailles spécifiques pour certaines icônes */
+#wh { width: 85px; height: 85px; }
+#lin { width: 95px; height: 95px; }
+#git { width: 85px; height: 85px; }
+
+
+/* --- Skills & CV Section --- */
+section#cv {
+    background-color: #f5f5f5; /* Fond clair pour cette section */
+    color: #333; /* Texte sombre par défaut */
+    padding-top: 1rem;
+}
+
+section#cv h2 {
+    color: #db5c5c;
+    margin-bottom: 2.5rem;
+}
+
+.cv-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Important pour que les blocs passent à la ligne */
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start; /* Changé de stretch à flex-start pour éviter l'extension verticale */
+    margin-top: 0.4rem;
+}
+
+.skills-block, .cv-download-block {
+    background-color: #383838; /* Fond sombre pour les blocs */
+    color: #f1f1f1;
+    padding: 35px; /* Plus de padding */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 100%;
+    height: 760px;
+    max-width: calc(50% - 20px); /* Prend environ la moitié de l'espace avec la gap */
+    min-width: 300px; /* Empêche les blocs de devenir trop petits */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Fallback pour les navigateurs qui ne supportent pas calc() dans max-width */
+@supports not (max-width: calc(50% - 20px)) {
+    .skills-block, .cv-download-block {
+        max-width: 420px; /* Une valeur fixe si calc() n'est pas supporté */
+    }
+}
+
+
+.skills-block:hover, .cv-download-block:hover {
+    transform: translateY(-8px); /* Effet au survol plus prononcé */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.skills-title, .download-title {
+    font-size: 1.8rem; /* Taille de titre ajustée */
+    color: #db5c5c;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Espacement entre icône et texte */
+}
+
+.skills-title i, .download-title i {
+    font-size: 1.8rem;
+    color: #db5c5c;
+}
+
+.skill-category {
+    margin-bottom: 3rem; /* Plus d'espace entre les catégories */
+}
+.category-title {
+    font-size: 1.4rem;
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #555; /* Séparateur subtil */
+    padding-bottom: 8px;
+}
+
+.skill-item {
+    margin-bottom: 18px; /* Plus d'espace entre les compétences */
+}
+.skill-item span {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px; /* Plus d'espace entre le texte et la barre */
+    color: #e0e0e0;
+}
+
+.progress-bar-container {
+    background-color: #555;
+    height: 12px; /* Barre plus épaisse */
+    border-radius: 6px;
+    overflow: hidden;
+}
+.progress-bar {
+    background-color: #db5c5c;
+    height: 100%;
+    border-radius: 6px;
+    width: 0%;
+    transition: width 1s ease-out;
+}
+
+.progress-bar.csharp { width: 80%; }
+.progress-bar.webfront { width: 85%; }
+.progress-bar.webpack { width: 70%; }
+.progress-bar.sql { width: 80%; }
+
+.soft-skills-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.soft-skills-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px; 
+    font-size: 20px;
+    color: #e0e0e0;
+}
+.soft-skills-list li::before {
+    content: '•';
+    color: #db5c5c;
+    font-size: 1.5em; /* Puce plus grande */
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+.download-description {
+    font-size: 1.4rem;
+    margin-bottom: 30px; /* Plus d'espace */
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-align: center;
+    flex-grow: 1; /* Permet à la description de prendre de l'espace */
+}
+
+.download-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    height: 500px;
+    color: #f1f1f1;
+    background-color: #db5c5c;
+    padding: 12px 20px; /* Plus de padding */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-top: auto; /* Pousse le bouton vers le bas */
+}
+
+
+.download-button:hover {
+    background-color: #e06c6c00;
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+#cv-icon {
+    width: 400px; /* Taille de l'image */
+    height: auto; /* Permet de conserver les proportions */
+    max-width: 100%; /* S'assure que l'image ne déborde pas */
+    display: block; /* Important pour que margin-bottom fonctionne */
+    margin-bottom: 10px;
+
+}
+
+
+/* --- Projects Section --- */
+section#projects {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+    max-width: 100%;
+    padding-bottom: 0.5rem; /* Espace réduit comme demandé */
+    padding-top: 1rem
+}
+
+section#projects h2 {
+    color: #db5c5c;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem; /* Plus d'espace */
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background-color: #383838;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Ombre plus visible */
+    width: 100%;
+    max-width: calc(50% - 20px); /* Prend environ la moitié de l'espace avec la gap */
+    min-width: 300px; /* Empêche les blocs de devenir trop petits */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.project-card h3 {
+    color: #f1f1f1; /* Blanc cassé */
+    font-size: 1rem;
+    padding: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    border-bottom: 1px solid #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-details {
+    padding: 25px; /* Plus de padding */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details h4 {
+    font-size: 1.2rem; /* Taille ajustée */
+    color: #db5c5c;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.project-details h4 i {
+    font-size: 1.5rem; /* Taille de l'icône */
+    color: #db5c5c;
+}
+
+.project-details p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 25px; /* Plus d'espace */
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.status-tag {
+    font-size: 0.85rem; /* Légèrement plus grand */
+    font-weight: normal;
+    background-color: #555;
+    color: #f1f1f1;
+    padding: 5px 10px; /* Plus de padding */
+    border-radius: 6px;
+    margin-top: 8px; /* Plus d'espace */
+    display: inline-block;
+}
+
+.status-tag.ongoing {
+    background-color: #cc8400; /* Orange plus profond */
+    color: #fff;
+}
+
+.status-tag.completed {
+    background-color: #28a745; /* Vert plus standard et lisible */
+    color: #fff;
+}
+
+.project-button {
+    display:inline-block;
+    padding: 12px 22px; /* Plus de padding */
+    background-color: #db5c5c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+    
+    margin-top: auto;
+    font-size: 0.95rem; /* Taille de texte ajustée */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* Nouveau conteneur pour les boutons */
+.project-buttons {
+    display: flex;
+    gap: 15px; /* Espace entre les deux boutons */
+    margin-top: auto; /* C'est lui qui pousse vers le bas maintenant */
+    flex-wrap: wrap; /* Si l'écran est trop petit, ils passeront à la ligne */
+}
+
+/* Petite modification sur ton bouton existant */
+.project-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #db5c5c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    
+    /* On retire align-self et margin-top d'ici car c'est le parent qui gère */
+    margin-top: 0; 
+}
+
+.project-button:hover {
+    background-color: #e06c6c3a;
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.project-button.disabled {
+    background-color: #6a6a6a;
+    cursor: not-allowed;
+    opacity: 0.6; /* Plus d'opacité */
+    pointer-events: none;
+    box-shadow: none; /* Pas d'ombre pour un bouton désactivé */
+}
+
+.more-projects-info {
+    text-align: center;
+    margin-top: 5rem; /* Plus d'espace */
+    font-size: 1.15rem; /* Plus grand */
+    color: #aaa; /* Gris plus clair */
+    font-style: italic;
+}
+
+
+/* --- Styles des Badges Technos --- */
+
+/* Le conteneur qui aligne les badges */
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si trop de tags */
+    gap: 10px; /* Espace entre les badges */
+    margin-bottom: 20px; /* Espace avant le bouton "View Project" */
+    margin-top: auto; /* Pousse les tags vers le bas si la carte est grande */
+}
+
+/* Le style de chaque badge */
+.tech-tag {
+    background-color: #2b2b2b; /* Fond un peu plus sombre que la carte */
+    color: #e0e0e0; /* Texte gris clair */
+    font-size: 0.85rem; /* Texte un peu plus petit */
+    padding: 6px 12px; /* Espace intérieur */
+    border-radius: 20px; /* Bords très arrondis (style "pilule") */
+    border: 1px solid #444; /* Bordure subtile */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: default; /* Pas de curseur main car ce n'est pas un bouton */
+}
+
+/* Petit effet au survol pour le style */
+.project-card:hover .tech-tag {
+    border-color: #db5c5c; /* La bordure devient rouge quand on survole la carte */
+    background-color: #333;
+}
+/* --- Contact Section --- */
+section#contact {
+    background-color: #2c2c2c; /* On garde le style sombre */
+    color: #f1f1f1;
+    max-width: 100%;
+    padding-top: 2rem
+}
+
+section#contact h2 {
+    color: #db5c5c;
+    padding-top: 1rem
+}
+
+section#contact .section-intro {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #383838;
+    color: #f1f1f1;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #db5c5c;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #db5c5c;
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    align-self: center; /* Se centre dans le formulaire */
+    margin-top: 0.5rem;
+}
+
+.contact-button:hover {
+    background-color: #e06c6c;
+    transform: scale(1.05);
+}
+
+.alternative-contact {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #aaa;
+}
+.alternative-contact p {
+    margin-bottom: 0.5rem;
+}
+
+/* Style quand le bouton est désactivé par le Javascript */
+.contact-button:disabled {
+    opacity: 0.7;           /* Le rend un peu transparent */
+    cursor: not-allowed;    /* Affiche un sens interdit au survol */
+    background-color: #ccc; /* (Optionnel) Le rend gris */
+}
+
+
+/* --- Footer --- */
+/* C'est la seule règle "footer" maintenant, l'ancienne a été supprimée */
+footer {
+    text-align: center;
+    background: #222;
+    color: #aaa;
+    padding: 1.5rem; /* Padding ajusté */
+    margin-top: 0; /* Plus de marge pour coller à la section contact */
+}
+
+footer p {
+    margin-bottom: 0; /* Pas de marge en bas du paragraphe */
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 960px) { /* Ajusté pour les tablettes et petits desktops */
+    section {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+    #Who {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    .intro, .social-media, .skills-block, .cv-download-block, .project-card {
+        padding: 30px;
+    }
+    .tech-icons img {
+        height: 40px;
+    }
+    .image-scroll img {
+        width: 200px;
+        height: 130px;
+    }
+    .sm {
+        margin: 10px;
+        width: 55px;
+        height: 55px;
+    }
+    #in, #lin { width: 85px; height: 85px; }
+    #wh, #git { width: 75px; height: 75px; }
+    .skills-block, .cv-download-block, .project-card {
+        max-width: calc(50% - 15px); /* Ajusté pour le gap de 30px */
+        min-width: 280px;
+    }
+    @supports not (max-width: calc(50% - 15px)) {
+        .skills-block, .cv-download-block, .project-card {
+            max-width: 360px; /* Une valeur fixe si calc() n'est pas supporté */
+        }
+    }
+    .cv-content-wrapper, .projects-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) { /* Pour les smartphones en mode paysage et petites tablettes */
+    header {
+        padding: 10px 20px;
+    }
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap; /* Permet à la nav de passer à la ligne si trop de liens */
+        justify-content: center;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    section {
+        padding-top: 80px; /* Moins de padding pour le header plus petit */
+        padding-bottom: 3rem;
+    }
+    section#home {
+        min-height: 80vh; /* Moins de hauteur pour #home */
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-width: 4px;
+    }
+    #Who {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        margin-top: 2rem;
+    }
+    .cv-content-wrapper, .projects-grid {
+        flex-direction: column; /* Forcé à une seule colonne */
+        align-items: center;
+        gap: 30px; /* Moins d'espace */
+    }
+    .skills-block, .cv-download-block, .project-card { 
+        max-width: 95%; /* Prend plus de largeur */
+        width: 100%; 
+        min-width: unset; /* Supprime le min-width pour mobile */
+    }
+    .image-scroll {
+        gap: 15px;
+        margin: 2rem 0;
+    }
+    .image-scroll img {
+        width: 180px;
+        height: 110px;
+    }
+    .social-media {
+        padding: 20px;
+    }
+    .sm {
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    #in, #lin { width: 80px; height: 80px; }
+    #wh, #git { width: 70px; height: 70px; }
+    .skills-title, .download-title {
+        font-size: 1.6rem;
+    }
+    .skills-title i, .download-title i {
+        font-size: 1.6rem;
+    }
+    .category-title {
+        font-size: 1.2rem;
+    }
+    .more-projects-info {
+        margin-top: 3rem;
+        font-size: 1rem;
+    }
+    footer {
+        padding: 1.2rem;
+        margin-top: 0; /* On s'assure que ça colle aussi sur mobile */
+    }
+}
+
+@media (max-width: 480px) { /* Pour les petits smartphones */
+    header nav ul {
+        flex-direction: column; /* La navigation s'empile verticalement */
+        gap: 0.5rem;
+    }
+    header nav ul li a {
+        padding: 5px 10px;
+    }
+    section#home h1 {
+        font-size: 2rem;
+    }
+    section#home h2 {
+        font-size: 1.3rem;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-width: 3px;
+    }
+    #Who {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    .intro, .social-media, .skills-block, .cv-download-block, .project-card {
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .tech-icons {
+        gap: 15px;
+        margin: 2rem 0;
+        padding: 10px;
+    }
+    .tech-icons img {
+        height: 35px;
+    }
+    .image-scroll {
+        gap: 10px;
+        margin: 1.5rem 0;
+    }
+    .image-scroll img {
+        width: 150px;
+        height: 90px;
+        border-width: 2px;
+    }
+    .social-media .sm {
+        margin: 8px;
+        width: 45px;
+        height: 45px;
+    }
+    #in, #lin { width: 70px; height: 70px; }
+    #wh, #git { width: 60px; height: 60px; }
+    .skills-title, .download-title {
+        font-size: 1.4rem;
+        gap: 8px;
+    }
+    .skills-title i, .download-title i {
+        font-size: 1.4rem;
+    }
+    .category-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .skill-item span, .soft-skills-list li, .download-description, .project-details p {
+        font-size: 0.9rem;
+    }
+    .project-card h3 {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+    .project-details h4 {
+        font-size: 1.1rem;
+    }
+    .project-details h4 i {
+        font-size: 1.3rem;
+    }
+    .project-button {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    #cv-icon {
+        width: 150px;
+    }
+}
