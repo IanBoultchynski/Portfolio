@@ -138,3 +138,35 @@ async function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit);
+
+
+
+// --- FILTRE PAR TECHNOLOGIE (SMART MATCH) ---
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // 1. Gestion du style "Active"
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 2. Récupère la techno qu'on veut filtrer (ex: "PHP")
+        const filterValue = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+            // On récupère juste le texte des badges de cette carte
+            const techTags = card.querySelector('.project-tech-tags').innerText;
+
+            // Si c'est "all" OU si les badges contiennent le mot clé (ex: PHP)
+            if (filterValue === 'all' || techTags.includes(filterValue)) {
+                card.style.display = 'flex';
+                // Petite animation pour que ce soit fluide
+                card.style.opacity = '0';
+                setTimeout(() => card.style.opacity = '1', 50);
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});

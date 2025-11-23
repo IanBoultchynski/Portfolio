@@ -123,10 +123,20 @@
         <br>
         <p class="section-intro">Here's a look at some of my recent work and ongoing creations.</p>
 
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="C#">C# .NET</button>
+            <button class="filter-btn" data-filter="HTML">HTML / CSS</button>
+            <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+            <button class="filter-btn" data-filter="PHP">PHP</button>
+            <button class="filter-btn" data-filter="SQL">SQL</button>
+            <button class="filter-btn" data-filter="Python">Python</button>
+        </div>
         <div class="projects-grid">
 
             <div class="project-card">
-                <h3>This Portfolio Website <span class="status-tag completed">Completed - 2025</span></h3>
+                <h3>This Portfolio Website <span class="status-tag completed">Completed - November 2025</span></h3>
+                
                 <img src="image/portfolio-screenshot.jpg" alt="Screenshot of the portfolio website">
                 <div class="project-details">
                     <h4><i class="fas fa-desktop"></i> My Role: Web Developer (BUT2 IT Project)</h4>
@@ -135,12 +145,12 @@
                     </p>
                        <div class="project-tech-tags">
                          <span class="tech-tag">HTML/CSS</span>
-                         <span class="tech-tag">PHP</span>
+                        
                          <span class="tech-tag">JavaScript</span>
                         </div>
                         
                         <div class="project-buttons">
-                            <a target="_blank" href="#" class="project-button">View Portfolio</a>  
+                           
                             <a target="_blank" href="https://github.com/IanBoultchynski/Portfolio.git" class="project-button">Code source</a>
                            
                         </div>
@@ -148,22 +158,24 @@
             </div>
 
             <div class="project-card">
-                <h3>University Project <span class="status-tag ongoing">Ongoing - 2026</span></h3>
+                <h3>University Project - Web application for CubeBike <span class="status-tag ongoing">Ongoing - 2026</span></h3>
                 <img src="image/cube.png" alt="CUBE"> <div class="project-details">
                     <h4><i class="fas fa-laptop-code"></i> My Role: Conception & dev application (BUT2 IT Project)</h4>
                     <p>
                         University team project aiming to clone the CUBE website (bike manufacturer).
-                         We handled the entire process from scratch, covering both design and development."
+                         We handled the entire process from scratch, covering both design and development.
                     </p>
                     <div class="project-tech-tags">
-                        <span class="tech-tag">C# .NET</span>
+                        <span class="tech-tag">HTML/CSS</span>
                         <span class="tech-tag">SQL</span>
                         <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">HTML/CSS</span>
                         <span class="tech-tag">JavaScript</span>
                     </div>
-                  
-                    <a href="#" class="project-button disabled" title="Coming soon!">Learn More (Coming Soon)</a>
+                    <div class="project-buttons">
+                    <a href="#" class="project-button disabled" title="Coming soon!">View Website (Comming soon)</a>
+
+                    <a href="" class="project-button">Learn more...</a>
+                    </div>
                 </div>
             </div>
 
@@ -174,8 +186,13 @@
                     <h4><i class="fas fa-laptop-code"></i> My Role: Web Application Lead Developer</h4>
                     <p>
                         Developed a web application connected to a biathlon laser target, allowing users to track their shots and improve aiming precision. 
-                        This project was part of the French Engineering Olympiad in Grenoble.
+                        This project was <strong>part of </strong>the French Engineering Olympiad in Grenoble.
+                        <strong> TOP 1 - GENEVE, SUISSE</strong>
+                   
+                    
                     </p>
+                   
+                   
                     <div class="project-tech-tags">
                         <span class="tech-tag">C++</span>
                         <span class="tech-tag">Python</span>
@@ -195,7 +212,7 @@
             
             <div class="project-card">
                 <h3>Abstract Life Game <span class="status-tag ongoing">Ongoing - 2028</span></h3>
-                <img src="image/projet 2.jpg" alt="Abstract game project image">
+                <img src="image/goun.png" alt="Abstract game project image">
                 <div class="project-details">
                     <h4><i class="fas fa-hammer"></i> My Role: Developer & Concept Creator</h4>
                     <p>
@@ -203,10 +220,55 @@
                         This project is currently in its early development stages, focusing on unique mechanics and artistic expression.
                     </p>
                     <div class="project-tech-tags">
-                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">C# .NET</span>
                         <span class="tech-tag">Unity / Godot</span>
                     </div>
-                    <a href="#" class="project-button disabled" title="Coming soon!">Learn More (Coming Soon)</a>
+                    <a href="" class="project-button disabled" title="Coming soon!">Learn More (Coming Soon)</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="SQL">
+                <h3>Soil Analysis Database <span class="status-tag completed">Completed - March 2025</span></h3>
+                <img src="image/powerbi1.jpg" alt="Database Project PowerBI">
+                <div class="project-details">
+                    <h4><i class="fas fa-database"></i> My Role: Database Designer & Analyst</h4>
+                    <p>
+                        Design and implementation of a relational database dedicated to <strong>soil sampling analysis</strong>. 
+                        The goal was to structure complex data to enable efficient retrieval and visualization using <strong>Power BI</strong>.
+                    </p>
+
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Data Modeling</span>
+                    </div>
+                    
+                    <div class="project-buttons">
+                        <a href="" class="project-button">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="C#">
+                <h3>University project - Loxam Management App <span class="status-tag completed">Completed - June 2025</span></h3>
+                <img src="image/loxam.jpg" alt="Loxam Application">
+                <div class="project-details">
+                    <h4><i class="fas fa-desktop"></i> My Role: .NET Application Developer</h4>
+                    <p>
+                        Development of a robust desktop application based on the <strong>Loxam</strong> business model. 
+                        Built with <strong>WPF</strong> and <strong>C#</strong>, it features a user-friendly interface connected to a <strong>SQL database</strong> for equipment management.
+                    </p>
+
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">C# .NET</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">WPF</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="" class="project-button">View Application</a>
+                        <a target="_blank" href="https://github.com/IanBoultchynski/Loxam" class="project-button">Code source</a>
+                    </div>
                 </div>
             </div>
 
