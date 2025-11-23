@@ -1,46 +1,41 @@
-/* --- Global Resets & Base Styles --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
-
-/* AJOUTÉ : Pour le smooth scroll PARTOUT */
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: #f5f5f5; /* Fond très léger pour les sections claires */
-    color: #333; /* Couleur de texte par défaut pour les sections claires */
+    background-color: #f5f5f5; 
+    color: #333; 
     line-height: 1.6;
-
 }
 
 h1 {
     font-size: 2.8rem;
     letter-spacing: 0.5px;
-    color: #f1f1f1; /* Blanc pour le h1 sur fond sombre de #home */
+    color: #f1f1f1; 
 }
 
 h2 {
-    color: #db5c5c; /* Couleur d'accentuation principale */
-    margin-bottom: 1.5rem; /* Augmenté pour un meilleur espacement */
-    font-size: 2.2rem; /* Taille plus grande pour les titres de section */
+    color: #db5c5c; 
+    margin-bottom: 1.5rem; 
+    font-size: 2.2rem; 
     text-align: center;
 }
 
 h3 {
-    color: #f1f1f1; /* Blanc cassé pour les h3 sur fond sombre */
+    color: #f1f1f1; 
     margin-bottom: 1rem;
-    font-size: 1.6rem; /* Taille ajustée */
+    font-size: 1.6rem; 
     text-align: center;
 }
 
-h4 { /* Nouvelle règle pour les h4 */
+h4 { 
     font-size: 1.2rem;
     color: #db5c5c;
     margin-bottom: 1rem;
@@ -52,18 +47,17 @@ p {
 }
 
 a {
-    color: #db5c5c; /* Couleur de lien par défaut, cohérente */
+    color: #db5c5c; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #e06c6c; /* Couleur de lien au survol */
+    color: #e06c6c; 
 }
 
-/* --- Header & Navigation --- */
 header {
-    background: #222; /* Fond très sombre */
+    background: #222; 
     color: #fff;
     display: flex;
     align-items: center;
@@ -72,15 +66,38 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 30px; /* Plus de padding pour la hauteur */
+    padding: 15px 30px; 
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    margin-right: auto;
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2.5rem; /* Plus d'espace entre les liens */
+    gap: 2.5rem; 
 }
 
 nav a {
@@ -89,28 +106,26 @@ nav a {
     transition: color 0.3s ease, transform 0.2s ease;
     font-weight: 500;
     font-size: 1.1rem;
-    padding: 5px 0; /* Pour une zone de clic plus large */
+    padding: 5px 0; 
 }
 
 nav a:hover,
 nav a.active {
     color: #db5c5c;
-    transform: translateY(-2px); /* Léger effet au survol */
+    transform: translateY(-2px); 
 }
 
-/* --- Section Base Styling --- */
 section {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 1rem;
-    padding-top: 100px; /* Espace pour le header fixe */
-    padding-bottom: 5rem; /* Plus d'espace en bas de chaque section */
-    min-height: 90vh; /* S'assure que la section est suffisamment grande */
+    padding-top: 100px; 
+    padding-bottom: 5rem; 
+    min-height: 90vh; 
     position: relative;
     z-index: 1;
 }
 
-/* --- Home Section --- */
 section#home {
     min-height: 100vh;
     display: flex;
@@ -118,32 +133,35 @@ section#home {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image/bg.jpg'); /* Opacité forte */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image/bg.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    max-width: 100%; /* S'étend sur toute la largeur */
-    padding-top: 0; /* Pas de padding-top ici, le contenu est centré */
+    max-width: 100%; 
+    padding-top: 0; 
     z-index: 0;
-    color: #f1f1f1; /* Texte par défaut blanc pour #home */
+    color: #f1f1f1; 
 }
 
 section#home h1 {
     animation: fadeInUp 1s ease-out backwards;
     color: #f1f1f1;
     margin-bottom: 1rem;
-    font-size: 3.5rem; /* Plus grand pour le nom */
+    font-size: 3.5rem; 
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
+
 section#home h2 {
-    font-size: 1.8rem; /* Taille ajustée */
+    font-size: 1.8rem; 
     color: #db5c5c;
     animation: fadeInUp 1s ease-out 0.2s backwards;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
+
 section#home .profile-pic {
     animation: fadeInUp 1s ease-out 0.4s backwards;
 }
+
 section#home #Who {
     animation: fadeInUp 1s ease-out 0.6s backwards;
 }
@@ -165,13 +183,13 @@ section#home #Who {
     border-radius: 50%;
     object-fit: cover;
     margin-top: 2.5rem;
-    border: 5px solid #db5c5c; /* Bordure plus épaisse */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4); /* Ombre plus prononcée */
+    border: 5px solid #db5c5c; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4); 
 }
 
 #Who {
     display: inline-block;
-    padding: 14px 28px; /* Plus grand */
+    padding: 14px 28px; 
     margin-top: 3rem;
     background-color: #db5c5c;
     color: #f1f1f1;
@@ -189,10 +207,9 @@ section#home #Who {
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* --- About Me Section --- */
 section#about {
-    background-color: #2c2c2c; /* Fond sombre */
-    color: #e0e0e0; /* Texte clair par défaut pour cette section */
+    background-color: #2c2c2c; 
+    color: #e0e0e0; 
     max-width: 100%;
 }
 
@@ -207,73 +224,73 @@ section#about h3 {
 
 section#about p {
     color: #e0e0e0;
-    line-height: 1.7; /* Améliore la lisibilité */
+    line-height: 1.7; 
     margin-bottom: 1.2rem;
 }
 
 section#about strong {
-    color: #ffffff; /* Blanc pur */
+    color: #ffffff; 
 }
 
 section#about em {
-    color: #ff9999; /* Rouge plus clair */
+    color: #ff9999; 
 }
 
 .intro {
-    background-color: #383838; /* Conteneur légèrement plus clair */
-    padding: 35px; /* Plus de padding */
+    background-color: #383838; 
+    padding: 35px; 
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Ombre plus profonde */
-    margin-bottom: 4rem; /* Plus d'espace */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+    margin-bottom: 4rem; 
 }
 
-/* Icônes de technologies */
 .tech-icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Plus d'espace entre les icônes */
+    gap: 30px; 
     margin: 3rem 0;
-    padding: 20px; /* Plus de padding */
-    background-color: #4a4a4a; /* Fond encore plus contrasté */
+    padding: 20px; 
+    background-color: #4a4a4a; 
     border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.3); /* Effet "incrusté" */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3); 
 }
 
 .tech-icons img {
-    height: 50px; /* Taille légèrement augmentée */
+    height: 50px; 
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: grayscale(40%) brightness(1.2); /* Plus de désaturation, légèrement plus clair */
+    filter: grayscale(40%) brightness(1.2); 
 }
 
 .tech-icons img:hover {
-    transform: scale(1.2); /* Zoom plus prononcé */
-    filter: grayscale(0%) brightness(1); /* Couleurs vives au survol */
+    transform: scale(1.2); 
+    filter: grayscale(0%) brightness(1); 
 }
 
 .image-scroll {
     display: flex;
-    gap: 25px; /* Espace ajusté */
+    gap: 25px; 
     overflow-x: auto;
-    margin: 3rem 0; /* Plus d'espace */
-    padding-bottom: 10px; /* Pour éviter de couper la scrollbar */
-    scrollbar-width: none; /* Firefox */
+    margin: 3rem 0; 
+    padding-bottom: 10px; 
+    scrollbar-width: none; 
 }
+
 .image-scroll::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none; 
 }
  
 .image-scroll img {
-    width: 250px; /* Taille légèrement augmentée */
-    height: 160px; /* Taille légèrement augmentée */
+    width: 250px; 
+    height: 160px; 
     object-fit: cover;
     border-radius: 10px;
     flex-shrink: 0;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    border: 3px solid #555; /* Bordure plus épaisse */
+    border: 3px solid #555; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
@@ -285,11 +302,11 @@ section#about em {
 
 .social-media {
     text-align: center;
-    padding: 30px; /* Plus de padding */
-    background-color: #383838; /* Conteneur légèrement plus clair */
+    padding: 30px; 
+    background-color: #383838; 
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    margin-top: 4rem; /* Assure un bon espacement avec le contenu précédent */
+    margin-top: 4rem; 
 }
 
 .social-media h2, .social-media h3 {
@@ -304,83 +321,93 @@ section#about em {
 
 .sm {
     display: inline-block;
-    margin: 20px; /* Plus d'espace entre les icônes */
-    width: 65px; /* Taille légèrement augmentée */
+    margin: 20px; 
+    width: 65px; 
     height: 65px;
     object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease;
     vertical-align: middle;
-    filter: brightness(0.9) grayscale(0.2); /* Légère désaturation */
-}
-.sm:hover {
-    transform: scale(1.6); /* Zoom plus prononcé */
-    filter: brightness(1.2) grayscale(0); /* Luminosité et couleurs vives au survol */
+    filter: brightness(0.9) grayscale(0.2); 
 }
 
-#in { width: 95px; height: 95px; } /* Tailles spécifiques pour certaines icônes */
+.sm:hover {
+    transform: scale(1.6); 
+    filter: brightness(1.2) grayscale(0); 
+}
+
+#in { width: 95px; height: 95px; } 
 #wh { width: 85px; height: 85px; }
 #lin { width: 95px; height: 95px; }
 #git { width: 85px; height: 85px; }
 
-
-/* --- Skills & CV Section --- */
 section#cv {
-    background-color: #f5f5f5; /* Fond clair pour cette section */
-    color: #333; /* Texte sombre par défaut */
+    background-color: #f5f5f5; 
+    color: #333; 
     padding-top: 1rem;
 }
 
 section#cv h2 {
     color: #db5c5c;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .cv-content-wrapper {
     display: flex;
-    flex-wrap: wrap; /* Important pour que les blocs passent à la ligne */
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 40px;
-    align-items: flex-start; /* Changé de stretch à flex-start pour éviter l'extension verticale */
-    margin-top: 0.4rem;
+
+    align-items: stretch; 
+   
 }
 
 .skills-block, .cv-download-block {
-    background-color: #383838; /* Fond sombre pour les blocs */
+    background-color: #383838;
     color: #f1f1f1;
-    padding: 35px; /* Plus de padding */
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     width: 100%;
-    height: 760px;
-    max-width: calc(50% - 20px); /* Prend environ la moitié de l'espace avec la gap */
-    min-width: 300px; /* Empêche les blocs de devenir trop petits */
+    
+    
+    height: auto; 
+    
+    max-width: calc(50% - 20px);
+    min-width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    
 }
 
-/* Fallback pour les navigateurs qui ne supportent pas calc() dans max-width */
+#cv-icon {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 @supports not (max-width: calc(50% - 20px)) {
     .skills-block, .cv-download-block {
-        max-width: 420px; /* Une valeur fixe si calc() n'est pas supporté */
+        max-width: 420px; 
     }
 }
 
-
 .skills-block:hover, .cv-download-block:hover {
-    transform: translateY(-8px); /* Effet au survol plus prononcé */
+    transform: translateY(-8px); 
     box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 }
 
 .skills-title, .download-title {
-    font-size: 1.8rem; /* Taille de titre ajustée */
+    font-size: 1.8rem; 
     color: #db5c5c;
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* Espacement entre icône et texte */
+    gap: 12px; 
 }
 
 .skills-title i, .download-title i {
@@ -389,8 +416,9 @@ section#cv h2 {
 }
 
 .skill-category {
-    margin-bottom: 3rem; /* Plus d'espace entre les catégories */
+    margin-bottom: 3rem; 
 }
+
 .category-title {
     font-size: 1.4rem;
     color: #f1f1f1;
@@ -398,26 +426,28 @@ section#cv h2 {
     display: flex;
     align-items: center;
     gap: 10px;
-    border-bottom: 1px solid #555; /* Séparateur subtil */
+    border-bottom: 1px solid #555; 
     padding-bottom: 8px;
 }
 
 .skill-item {
-    margin-bottom: 18px; /* Plus d'espace entre les compétences */
+    margin-bottom: 18px; 
 }
+
 .skill-item span {
     display: block;
     font-size: 1rem;
-    margin-bottom: 8px; /* Plus d'espace entre le texte et la barre */
+    margin-bottom: 8px; 
     color: #e0e0e0;
 }
 
 .progress-bar-container {
     background-color: #555;
-    height: 12px; /* Barre plus épaisse */
+    height: 12px; 
     border-radius: 6px;
     overflow: hidden;
 }
+
 .progress-bar {
     background-color: #db5c5c;
     height: 100%;
@@ -436,6 +466,7 @@ section#cv h2 {
     padding: 0;
     margin-top: 15px;
 }
+
 .soft-skills-list li {
     font-size: 1rem;
     margin-bottom: 10px;
@@ -444,10 +475,11 @@ section#cv h2 {
     font-size: 20px;
     color: #e0e0e0;
 }
+
 .soft-skills-list li::before {
     content: '•';
     color: #db5c5c;
-    font-size: 1.5em; /* Puce plus grande */
+    font-size: 1.5em; 
     position: absolute;
     left: 0;
     top: -4px;
@@ -455,26 +487,28 @@ section#cv h2 {
 
 .download-description {
     font-size: 1.4rem;
-    margin-bottom: 30px; /* Plus d'espace */
+    margin-bottom: 30px; 
     line-height: 1.6;
     color: #e0e0e0;
     text-align: center;
-    flex-grow: 1; /* Permet à la description de prendre de l'espace */
+    flex-grow: 1; 
 }
 
 .download-button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
-    height: 500px;
+    height: auto;
+    padding: 30px;
     color: #f1f1f1;
     background-color: #db5c5c;
-    padding: 12px 20px; /* Plus de padding */
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    margin-top: auto; /* Pousse le bouton vers le bas */
+    margin-top: auto;
+    width: 100%;
 }
 
 
@@ -484,22 +518,11 @@ section#cv h2 {
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-#cv-icon {
-    width: 400px; /* Taille de l'image */
-    height: auto; /* Permet de conserver les proportions */
-    max-width: 100%; /* S'assure que l'image ne déborde pas */
-    display: block; /* Important pour que margin-bottom fonctionne */
-    margin-bottom: 10px;
-
-}
-
-
-/* --- Projects Section --- */
 section#projects {
     background-color: #2c2c2c;
     color: #f1f1f1;
     max-width: 100%;
-    padding-bottom: 0.5rem; /* Espace réduit comme demandé */
+    padding-bottom: 0.5rem; 
     padding-top: 1rem
 }
 
@@ -511,12 +534,10 @@ section#projects h2 {
 .section-intro {
     font-size: 1.1rem;
     color: #e0e0e0;
-    margin-bottom: 1.5rem; /* Plus d'espace */
+    margin-bottom: 1.5rem; 
     text-align: center;
 }
 
-
-/* --- Filter Buttons --- */
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -544,6 +565,7 @@ section#projects h2 {
     color: #fff;
     transform: translateY(-2px);
 }
+
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
@@ -555,10 +577,10 @@ section#projects h2 {
 .project-card {
     background-color: #383838;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Ombre plus visible */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
     width: 100%;
-    max-width: calc(50% - 20px); /* Prend environ la moitié de l'espace avec la gap */
-    min-width: 300px; /* Empêche les blocs de devenir trop petits */
+    max-width: calc(50% - 20px); 
+    min-width: 300px; 
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -566,15 +588,13 @@ section#projects h2 {
     text-align: left;
 }
 
-
-
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 .project-card h3 {
-    color: #f1f1f1; /* Blanc cassé */
+    color: #f1f1f1; 
     font-size: 1rem;
     padding: 20px;
     margin-bottom: 0;
@@ -594,14 +614,14 @@ section#projects h2 {
 }
 
 .project-details {
-    padding: 25px; /* Plus de padding */
+    padding: 25px; 
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .project-details h4 {
-    font-size: 1.2rem; /* Taille ajustée */
+    font-size: 1.2rem; 
     color: #db5c5c;
     margin-bottom: 1.5rem;
     display: flex;
@@ -611,62 +631,39 @@ section#projects h2 {
 }
 
 .project-details h4 i {
-    font-size: 1.5rem; /* Taille de l'icône */
+    font-size: 1.5rem; 
     color: #db5c5c;
 }
 
 .project-details p {
     font-size: 1rem;
     color: #e0e0e0;
-    margin-bottom: 25px; /* Plus d'espace */
+    margin-bottom: 25px; 
     flex-grow: 1;
     line-height: 1.6;
 }
 
 .status-tag {
-    font-size: 0.85rem; /* Légèrement plus grand */
+    font-size: 0.85rem; 
     font-weight: normal;
     background-color: #555;
     color: #f1f1f1;
-    padding: 5px 10px; /* Plus de padding */
+    padding: 5px 10px; 
     border-radius: 6px;
-    margin-top: 8px; /* Plus d'espace */
+    margin-top: 8px; 
     display: inline-block;
 }
 
 .status-tag.ongoing {
-    background-color: #cc8400; /* Orange plus profond */
+    background-color: #cc8400; 
     color: #fff;
 }
 
 .status-tag.completed {
-    background-color: #28a745; /* Vert plus standard et lisible */
+    background-color: #28a745; 
     color: #fff;
 }
 
-.project-button {
-    display:inline-block;
-    padding: 12px 22px; /* Plus de padding */
-    background-color: #db5c5c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    align-self: flex-start;
-    
-    margin-top: auto;
-    font-size: 0.95rem; /* Taille de texte ajustée */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-/* Nouveau conteneur pour les boutons */
-.project-buttons {
-    display: flex;
-    gap: 15px; /* Espace entre les deux boutons */
-    margin-top: auto; /* C'est lui qui pousse vers le bas maintenant */
-    flex-wrap: wrap; /* Si l'écran est trop petit, ils passeront à la ligne */
-}
-
-/* Petite modification sur ton bouton existant */
 .project-button {
     display: inline-block;
     padding: 12px 22px;
@@ -677,9 +674,14 @@ section#projects h2 {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 0.95rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    
-    /* On retire align-self et margin-top d'ici car c'est le parent qui gère */
     margin-top: 0; 
+}
+
+.project-buttons {
+    display: flex;
+    gap: 15px; 
+    margin-top: auto; 
+    flex-wrap: wrap; 
 }
 
 .project-button:hover {
@@ -691,52 +693,46 @@ section#projects h2 {
 .project-button.disabled {
     background-color: #6a6a6a;
     cursor: not-allowed;
-    opacity: 0.6; /* Plus d'opacité */
+    opacity: 0.6; 
     pointer-events: none;
-    box-shadow: none; /* Pas d'ombre pour un bouton désactivé */
+    box-shadow: none; 
 }
 
 .more-projects-info {
     text-align: center;
-    margin-top: 5rem; /* Plus d'espace */
-    font-size: 1.15rem; /* Plus grand */
-    color: #aaa; /* Gris plus clair */
+    margin-top: 5rem; 
+    font-size: 1.15rem; 
+    color: #aaa; 
     font-style: italic;
 }
 
-
-/* --- Styles des Badges Technos --- */
-
-/* Le conteneur qui aligne les badges */
 .project-tech-tags {
     display: flex;
-    flex-wrap: wrap; /* Permet de passer à la ligne si trop de tags */
-    gap: 10px; /* Espace entre les badges */
-    margin-bottom: 20px; /* Espace avant le bouton "View Project" */
-    margin-top: auto; /* Pousse les tags vers le bas si la carte est grande */
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-bottom: 20px; 
+    margin-top: auto; 
 }
 
-/* Le style de chaque badge */
 .tech-tag {
-    background-color: #2b2b2b; /* Fond un peu plus sombre que la carte */
-    color: #e0e0e0; /* Texte gris clair */
-    font-size: 0.85rem; /* Texte un peu plus petit */
-    padding: 6px 12px; /* Espace intérieur */
-    border-radius: 20px; /* Bords très arrondis (style "pilule") */
-    border: 1px solid #444; /* Bordure subtile */
+    background-color: #2b2b2b; 
+    color: #e0e0e0; 
+    font-size: 0.85rem; 
+    padding: 6px 12px; 
+    border-radius: 20px; 
+    border: 1px solid #444; 
     transition: all 0.3s ease;
     font-weight: 500;
-    cursor: default; /* Pas de curseur main car ce n'est pas un bouton */
+    cursor: default; 
 }
 
-/* Petit effet au survol pour le style */
 .project-card:hover .tech-tag {
-    border-color: #db5c5c; /* La bordure devient rouge quand on survole la carte */
+    border-color: #db5c5c; 
     background-color: #333;
 }
-/* --- Contact Section --- */
+
 section#contact {
-    background-color: #2c2c2c; /* On garde le style sombre */
+    background-color: #2c2c2c; 
     color: #f1f1f1;
     max-width: 100%;
     padding-top: 2rem
@@ -804,7 +800,7 @@ section#contact .section-intro {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    align-self: center; /* Se centre dans le formulaire */
+    align-self: center; 
     margin-top: 0.5rem;
 }
 
@@ -818,30 +814,27 @@ section#contact .section-intro {
     margin-top: 1.5rem;
     color: #aaa;
 }
+
 .alternative-contact p {
     margin-bottom: 0.5rem;
 }
 
-/* Style quand le bouton est désactivé par le Javascript */
 .contact-button:disabled {
-    opacity: 0.7;           /* Le rend un peu transparent */
-    cursor: not-allowed;    /* Affiche un sens interdit au survol */
-    background-color: #ccc; /* (Optionnel) Le rend gris */
+    opacity: 0.7;           
+    cursor: not-allowed;    
+    background-color: #ccc; 
 }
 
-
-/* --- Footer --- */
-/* C'est la seule règle "footer" maintenant, l'ancienne a été supprimée */
 footer {
     text-align: center;
     background: #222;
     color: #aaa;
-    padding: 1.5rem; /* Padding ajusté */
-    margin-top: 0; /* Plus de marge pour coller à la section contact */
+    padding: 1.5rem; 
+    margin-top: 0; 
 }
 
 footer p {
-    margin-bottom: 0; /* Pas de marge en bas du paragraphe */
+    margin-bottom: 0; 
     font-size: 0.95rem;
 }
 
@@ -850,10 +843,100 @@ footer a {
     text-decoration: none;
 }
 
+.lightbox {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.92); 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
 
-/* --- Media Queries (Responsiveness) --- */
-@media (max-width: 960px) { /* Ajusté pour les tablettes et petits desktops */
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 85%;
+    text-align: center;
+}
+
+.lightbox-content img, 
+.lightbox-content video {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 2px solid #383838;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+#caption {
+    margin-top: 15px;
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #aaa;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 2001;
+}
+
+.close-btn:hover {
+    color: #db5c5c;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    transition: color 0.3s;
+    user-select: none;
+    z-index: 2002;
+}
+
+.nav-btn:hover {
+    color: #db5c5c;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.nav-btn.hidden {
+    display: none;
+}
+
+@media (max-width: 960px) { 
     section {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -896,12 +979,12 @@ footer a {
     #in, #lin { width: 85px; height: 85px; }
     #wh, #git { width: 75px; height: 75px; }
     .skills-block, .cv-download-block, .project-card {
-        max-width: calc(50% - 15px); /* Ajusté pour le gap de 30px */
+        max-width: calc(50% - 15px); 
         min-width: 280px;
     }
     @supports not (max-width: calc(50% - 15px)) {
         .skills-block, .cv-download-block, .project-card {
-            max-width: 360px; /* Une valeur fixe si calc() n'est pas supporté */
+            max-width: 360px; 
         }
     }
     .cv-content-wrapper, .projects-grid {
@@ -909,24 +992,77 @@ footer a {
     }
 }
 
-@media (max-width: 768px) { /* Pour les smartphones en mode paysage et petites tablettes */
+@media (max-width: 768px) { 
     header {
-        padding: 10px 20px;
+        justify-content: space-between;
+        padding: 15px 20px;
     }
+
+    .logo {
+        display: block; 
+    }
+
+    .menu-toggle {
+        display: flex; 
+        z-index: 1001;
+    }
+
     nav ul {
-        gap: 1rem;
-        flex-wrap: wrap; /* Permet à la nav de passer à la ligne si trop de liens */
-        justify-content: center;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        height: 0; 
+        background-color: #222;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden; 
+        transition: height 0.4s ease-out; 
+        gap: 0; 
+        border-bottom: 2px solid #db5c5c; 
     }
-    nav a {
-        font-size: 0.9rem;
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        opacity: 0; 
+        transition: opacity 0.3s ease 0.1s;
     }
+
+    nav ul li a {
+        display: block;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    nav ul li a:hover {
+        background-color: #333; 
+    }
+
+    nav ul.mobile-visible {
+        height: 380px; 
+    }
+
+    nav ul.mobile-visible li {
+        opacity: 1; 
+    }
+
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
     section {
-        padding-top: 80px; /* Moins de padding pour le header plus petit */
+        padding-top: 80px; 
         padding-bottom: 3rem;
     }
     section#home {
-        min-height: 80vh; /* Moins de hauteur pour #home */
+        min-height: 80vh; 
     }
     h1 {
         font-size: 2.5rem;
@@ -948,14 +1084,15 @@ footer a {
         margin-top: 2rem;
     }
     .cv-content-wrapper, .projects-grid {
-        flex-direction: column; /* Forcé à une seule colonne */
+        flex-direction: column; 
         align-items: center;
-        gap: 30px; /* Moins d'espace */
+        gap: 30px; 
     }
     .skills-block, .cv-download-block, .project-card { 
-        max-width: 95%; /* Prend plus de largeur */
+        max-width: 95%; 
         width: 100%; 
-        min-width: unset; /* Supprime le min-width pour mobile */
+        min-width: unset; 
+        min-height: auto;
     }
     .image-scroll {
         gap: 15px;
@@ -990,18 +1127,26 @@ footer a {
     }
     footer {
         padding: 1.2rem;
-        margin-top: 0; /* On s'assure que ça colle aussi sur mobile */
+        margin-top: 0; 
+    }
+    .lightbox-content img, 
+    .lightbox-content video {
+        max-width: 95%;
+        max-height: 60vh;
+    }
+    .nav-btn {
+        font-size: 30px; 
+        padding: 0 10px;
+    }
+    .download-button {
+        padding: 20px;
+    }
+    #cv-icon {
+        max-width: 180px;
     }
 }
 
-@media (max-width: 480px) { /* Pour les petits smartphones */
-    header nav ul {
-        flex-direction: column; /* La navigation s'empile verticalement */
-        gap: 0.5rem;
-    }
-    header nav ul li a {
-        padding: 5px 10px;
-    }
+@media (max-width: 480px) { 
     section#home h1 {
         font-size: 2rem;
     }

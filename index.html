@@ -11,8 +11,16 @@
 <body>
 
     <header>
+        <a href="#home" class="logo">Ian B.</a>
+    
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    
         <nav>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="#home" class="active"> Home </a></li>
                 <li><a href="#about">About me</a></li>
                 <li><a href="#cv">Skills & CV</a></li>
@@ -22,7 +30,6 @@
             </ul>
         </nav>
     </header>
-
     <section id="home">
         <h1>Ian Boultchynski</h1>
         <h2>IT STUDENT - DEV JUNIOR</h2>
@@ -41,12 +48,7 @@
             </p>
             <p>I use these skills for <strong>various projects</strong> and <strong> operating environments</strong> : WPF software, games (Goddot, Unity, Unreal Engine), websites, etc.</p>
                 
-            <div class="tech-icons">
-                <img src="image/cs.png" alt="C# Logo" title="C# .NET">
-                <img src="image/unity.png" alt="Unity Logo" title="Unity">
-                <img src="image/sql.png" alt="SQL Logo" title="PostgreSQL">
-                <img src="image/vs.png" alt="Visual Studio Logo" title="Visual Studio">
-            </div>
+          
             
             <p>One of my biggest achievements so far was being part of the <strong>French Engineering Olympiad</strong> in Grenoble... 🏆.
                 It was a project that involved creating an application connected to a biathlon laser target so that users could improve their skills by tracking their shots. 
@@ -174,7 +176,12 @@
                     <div class="project-buttons">
                     <a href="#" class="project-button disabled" title="Coming soon!">View Website (Comming soon)</a>
 
-                    <a href="" class="project-button">Learn more...</a>
+                    <a href="#" class="project-button lightbox-trigger" 
+                       data-type="image" 
+                       data-src="image/mcd.png" 
+                       data-caption="Conception of the database (MCD)">
+                       View Concept (MCD)
+                    </a>
                     </div>
                 </div>
             </div>
@@ -188,8 +195,6 @@
                         Developed a web application connected to a biathlon laser target, allowing users to track their shots and improve aiming precision. 
                         This project was <strong>part of </strong>the French Engineering Olympiad in Grenoble.
                         <strong> TOP 1 - GENEVE, SUISSE</strong>
-                   
-                    
                     </p>
                    
                    
@@ -202,8 +207,16 @@
                     </div>
                     <div class="project-buttons">
                         <a target="_blank" href="https://www.lycee-louis-lachenal.fr/fr/olympiades-des-sciences-de-lingenieur-2024-concours-academique-des-eleves-de-sti2d-du-lycee" class="project-button">View Competition Details</a>
+                        
+                        <a href="#" class="project-button lightbox-trigger" 
+                           data-type="video" 
+                           data-src="video/simo1.mp4" 
+                           data-caption="Demonstration and explication of the connected target">
+                           See Video
+                        </a>
+
                         <a target="_blank" href="https://github.com/IanBoultchynski/Biathlon-APP-sin.git" class="project-button">Code source</a>
-                       
+                        
                     </div>
 
 
@@ -223,7 +236,9 @@
                         <span class="tech-tag">C# .NET</span>
                         <span class="tech-tag">Unity / Godot</span>
                     </div>
+                    <div class="project-buttons">
                     <a href="" class="project-button disabled" title="Coming soon!">Learn More (Coming Soon)</a>
+                </div>
                 </div>
             </div>
 
@@ -244,7 +259,12 @@
                     </div>
                     
                     <div class="project-buttons">
-                        <a href="" class="project-button">View Project</a>
+                        <a href="#" class="project-button lightbox-trigger" 
+                           data-type="gallery" 
+                           data-gallery="image/SAE4.png,image/SAE41.png,image/SAE42.png"
+                           data-caption="Data visualisation">
+                           View Gallery
+                        </a>
                     </div>
                 </div>
             </div>
@@ -266,7 +286,12 @@
                     </div>
 
                     <div class="project-buttons">
-                        <a href="" class="project-button">View Application</a>
+                        <a href="#" class="project-button lightbox-trigger" 
+                           data-type="gallery" 
+                           data-gallery="image/LoxamProjet.png,image/LoxamProjet1.png"
+                           data-caption="Interface WPF">
+                           View Application
+                        </a>
                         <a target="_blank" href="https://github.com/IanBoultchynski/Loxam" class="project-button">Code source</a>
                     </div>
                 </div>
@@ -332,6 +357,19 @@
         </section>
         <p>&copy; 2025 Ian Boultchynski. All rights reserved.</p>
     </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Zoom projet">
+            <video id="lightbox-video" controls style="display:none;"></video>
+            <div id="caption"></div>
+        </div>
+    
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+    </div>
 
     <script src="script.js" defer></script>
 </body>
