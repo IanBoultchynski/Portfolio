@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Ian Boultchynski | Portfolio</title> 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Portfolio of Ian Boultchynski, IT Student and Junior Developer specializing in C# .NET, Web Development and Game Design. based in Annecy.">
 </head>
 <body>
 
@@ -26,10 +29,10 @@
                 <li><a href="#cv">Skills & CV</a></li>
                 <li><a href="#projects">My Projects</a></li>
                 <li><a href="#contact">Contact Me</a></li>
-                <li><a href="#social">Social</a></li>
             </ul>
         </nav>
     </header>
+    
     <section id="home">
         <h1>Ian Boultchynski</h1>
         <h2>IT STUDENT - DEV JUNIOR</h2>
@@ -39,33 +42,32 @@
 
     <section id="about">
         <div class="intro">
-            <h2>About Me :</h2>
+            <h2>About Me</h2>
         
-            <p>I’m <strong>Ian Boultchynski</strong>, a <strong>French computer science student</strong> passionate about blending <em>technology</em> and <em>creativity</em>. I love designing digital projects that are both logical and artistic — whether it’s <strong>web development</strong>, <strong>game design</strong>, or <strong>software creation</strong>.</p>
-            
-            <p>Currently studying doing a "<strong>BUT Informatique</strong>" at <strong>IUT Annecy</strong>, I’ve previously earned my <strong>French Baccalaureate "STI2D + SIN"</strong>
-                with honors. I’m now deepening my skills in <strong>C# .NET</strong>, <strong>SQL (PostgreSQL)</strong>, and <strong>web development</strong>. 
-            </p>
-            <p>I use these skills for <strong>various projects</strong> and <strong> operating environments</strong> : WPF software, games (Goddot, Unity, Unreal Engine), websites, etc.</p>
-                
-          
-            
-            <p>One of my biggest achievements so far was being part of the <strong>French Engineering Olympiad</strong> in Grenoble... 🏆.
-                It was a project that involved creating an application connected to a biathlon laser target so that users could improve their skills by tracking their shots. 
-                I was responsible for<strong> developing the application.</strong> </p>
-            
-            <div class="image-scroll">
-                <img src="image/1.jpg" alt="Projet Olympiades 1">
-                <img src="image/2.png" alt="Projet Olympiades 2">
-                <img src="image/4.png" alt="Projet Olympiades 3">
-                <img src="image/5.png" alt="Projet Olympiades 4">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I’m <strong>Ian Boultchynski</strong>, a <strong>French computer science student</strong> passionate about blending <em>technology</em> and <em>creativity</em>. I love designing digital projects that are both logical and artistic — whether it’s <strong>web development</strong>, <strong>game design</strong>, or <strong>software creation</strong>.</p>
+                    
+                    <p>Currently doing a "<strong>BUT Informatique</strong>" at <strong>IUT Annecy</strong>, I’ve previously earned my <strong>French Baccalaureate "STI2D + SIN"</strong>
+                        with honors. I’m now deepening my skills in <strong>C# .NET</strong>, <strong>SQL (PostgreSQL)</strong>, and <strong>web development</strong>. 
+                    </p>
+                    <p>I use these skills for <strong>various projects</strong> and <strong> operating environments</strong> : WPF software, games (Godot, Unity, Unreal Engine), websites, etc.</p>
+                        
+                    <p>One of my biggest achievements so far was being part of the <strong>French Engineering Olympiad</strong> in Grenoble...
+                        It was a project that involved creating an application connected to a biathlon laser target. I was responsible for<strong> developing the application.</strong> </p>
+                    
+                    <p>I’m driven by <strong>curiosity</strong> and a desire to build things that make people smile or think... I see programming as both a tool and an art form.</p>
+                </div>
+
+                <div class="static-gallery">
+                    <img src="image/1.jpg" alt="Projet Olympiades 1">
+                    <img src="image/2.png" alt="Projet Olympiades 2">
+                    <img src="image/4.png" alt="Projet Olympiades 3">
+                    <img src="image/5.png" alt="Projet Olympiades 4">
+                </div>
             </div>
-
-            <p>I’m driven by <strong>curiosity</strong> and a desire to build things that make people smile or think... I see programming as both a tool and an art form — a way to turn imagination into reality.</p>
         </div>
-
     </section>
-
 
     <section id="cv">
         <h2>Skills & CV</h2>
@@ -74,51 +76,51 @@
                 <h3 class="skills-title"><i class="fas fa-code"></i> My Skills</h3> 
                 
                 <div class="skill-category">
-                    <h4 class="category-title">Technical skills</h4>
-                    <div class="skill-item">
-                        <span>C# .NET Programming</span>
-                        <div class="progress-bar-container"><div class="progress-bar csharp"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>WebFront ( HTML, CSS, JS )</span>
-                        <div class="progress-bar-container"><div class="progress-bar webfront"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>WebBack (PHP)</span>
-                        <div class="progress-bar-container"><div class="progress-bar webpack"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span>SQL ( PostgreSQL )</span>
-                        <div class="progress-bar-container"><div class="progress-bar sql"></div></div>
+                    <h4 class="category-title">Technical Stack</h4>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> C# .NET</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-php"></i> PHP (WebBack)</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL (PostgreSQL)</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-unity"></i> Unity / Godot</span>
                     </div>
                 </div>
     
                 <div class="skill-category">
-                    <h4 class="category-title"> Soft skills</h4>
-                    <ul class="soft-skills-list">
-                        <li>Self-directed</li>
-                        <li>Take initiative</li>
-                        <li>Innovative</li>
-                        <li>Time management skills</li>
-                        <li>Punctual</li>
-                    </ul>
+                    <h4 class="category-title">Soft Skills</h4>
+                    <div class="skills-grid">
+                        <span class="skill-tag soft"><i class="fas fa-check"></i> Self-directed</span>
+                        <span class="skill-tag soft"><i class="fas fa-lightbulb"></i> Innovative</span>
+                        <span class="skill-tag soft"><i class="fas fa-users"></i> Teamwork</span>
+                        <span class="skill-tag soft"><i class="fas fa-clock"></i> Punctual</span>
+                        <span class="skill-tag soft"><i class="fas fa-tasks"></i> Organised</span>
+                    </div>
                 </div>
             </div>
     
-            <div class="cv-download-block">
-                <h3 class="download-title"><i class="fas fa-file-download"></i> Download My Resume</h3> 
-                <p class="download-description">
-                    Get a detailed overview of my education, experience, and projects.
-                </p>
-                <a href="image/CV INTERNATIONAL IAN BOULTCHYNSKI.pdf" download="CV_IAN_BOULTCHYNSKI.pdf" class="download-button">
-                    <img src="image/CV ANGLAIS.png" alt="Aperçu du CV" id="cv-icon"> 
-                    <span>Download CV (PDF)</span> 
-                </a>
+            <div class="cv-card">
+                <div class="cv-header">
+                    <div class="cv-icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="cv-info">
+                        <h3>Ian Boultchynski</h3>
+                        <p class="cv-role">Full Stack Junior & IT Student</p>
+                        <p class="cv-status"><i class="fas fa-map-marker-alt"></i> Based in Annecy, France</p>
+                    </div>
+                </div>
+                <div class="cv-body">
+                    <p>Looking for new opportunities in development.</p>
+                    <a href="image/CV INTERNATIONAL IAN BOULTCHYNSKI.pdf" download="CV_IAN_BOULTCHYNSKI.pdf" class="download-btn-premium">
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
-
 
     <section id="projects">
         <h2>My Projects</h2>
@@ -136,36 +138,32 @@
         </div>
         <div class="projects-grid">
 
-            <div class="project-card">
-                <h3>This Portfolio Website <span class="status-tag completed">Completed - November 2025</span></h3>
+            <div class="project-card completed">
+                <h3>This Portfolio Website <span class="status-tag completed">Completed - Nov 2025</span></h3>
                 
                 <img src="image/portfolio-screenshot.jpg" alt="Screenshot of the portfolio website">
                 <div class="project-details">
-                    <h4><i class="fas fa-desktop"></i> My Role: Web Developer (BUT2 IT Project)</h4>
+                    <h4><i class="fas fa-desktop"></i> My Role: Web Developer</h4>
                     <p>
                         This very website! BUT2 university project, using HTML, CSS and JavaScript.
                     </p>
                        <div class="project-tech-tags">
                          <span class="tech-tag">HTML/CSS</span>
-                        
                          <span class="tech-tag">JavaScript</span>
                         </div>
                         
                         <div class="project-buttons">
-                           
                             <a target="_blank" href="https://github.com/IanBoultchynski/Portfolio.git" class="project-button">Code source</a>
-                           
                         </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>University Project - Web application for CubeBike <span class="status-tag ongoing">Ongoing - 2026</span></h3>
+            <div class="project-card ongoing">
+                <h3>University Project - CubeBike <span class="status-tag ongoing">Ongoing - 2026</span></h3>
                 <img src="image/cube.png" alt="CUBE"> <div class="project-details">
-                    <h4><i class="fas fa-laptop-code"></i> My Role: Conception & dev application (BUT2 IT Project)</h4>
+                    <h4><i class="fas fa-laptop-code"></i> My Role: Conception & Dev</h4>
                     <p>
                         University team project aiming to clone the CUBE website (bike manufacturer).
-                         We handled the entire process from scratch, covering both design and development.
                     </p>
                     <div class="project-tech-tags">
                         <span class="tech-tag">HTML/CSS</span>
@@ -174,88 +172,87 @@
                         <span class="tech-tag">JavaScript</span>
                     </div>
                     <div class="project-buttons">
-                    <a href="#" class="project-button disabled" title="Coming soon!">View Website (Comming soon)</a>
+                    <a href="#" class="project-button disabled" title="Coming soon!">View Website</a>
 
                     <a href="#" class="project-button lightbox-trigger" 
                        data-type="image" 
                        data-src="image/mcd.png" 
                        data-caption="Conception of the database (MCD)">
-                       View Concept (MCD)
+                       View Concept
                     </a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>Engineering Olympiad: Biathlon Laser Target App <span class="status-tag completed">Completed - May 2024</span></h3>
+            <div class="project-card completed">
+                <h3>Engineering Olympiad: Laser Target <span class="status-tag completed">Completed - May 2024</span></h3>
                 <img src="image/Projet 1.png" alt="Biathlon laser target application image">
                 <div class="project-details">
-                    <h4><i class="fas fa-laptop-code"></i> My Role: Web Application Lead Developer</h4>
+                    <h4><i class="fas fa-laptop-code"></i> My Role: Lead Developer</h4>
                     <p>
-                        Developed a web application connected to a biathlon laser target, allowing users to track their shots and improve aiming precision. 
-                        This project was <strong>part of </strong>the French Engineering Olympiad in Grenoble.
+                        Web application connected to a biathlon laser target.
                         <strong> TOP 1 - GENEVE, SUISSE</strong>
                     </p>
-                   
                    
                     <div class="project-tech-tags">
                         <span class="tech-tag">C++</span>
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">Web (HTML/CSS)</span>
+                        <span class="tech-tag">Web</span>
                     </div>
                     <div class="project-buttons">
-                        <a target="_blank" href="https://www.lycee-louis-lachenal.fr/fr/olympiades-des-sciences-de-lingenieur-2024-concours-academique-des-eleves-de-sti2d-du-lycee" class="project-button">View Competition Details</a>
+                        <a target="_blank" href="https://www.lycee-louis-lachenal.fr/fr/olympiades-des-sciences-de-lingenieur-2024-concours-academique-des-eleves-de-sti2d-du-lycee" class="project-button">
+                            View Competition
+                        </a>
                         
                         <a href="#" class="project-button lightbox-trigger" 
                            data-type="video" 
-                           data-src="video/simo1.mp4" 
-                           data-caption="Demonstration and explication of the connected target">
-                           See Video
+                           data-src="video/simo.mp4" 
+                           data-caption="Project presentation (Part 1)">
+                           Video Intro
                         </a>
-
+                    
+                        <a href="#" class="project-button lightbox-trigger" 
+                           data-type="video" 
+                           data-src="video/simo1.mp4" 
+                           data-caption="Technical demonstration (Part 2)">
+                           Video Techniccal
+                        </a>
+                    
                         <a target="_blank" href="https://github.com/IanBoultchynski/Biathlon-APP-sin.git" class="project-button">Code source</a>
-                        
                     </div>
-
-
                 </div>
             </div>
             
-            <div class="project-card">
+            <div class="project-card ongoing">
                 <h3>Abstract Life Game <span class="status-tag ongoing">Ongoing - 2028</span></h3>
                 <img src="image/goun.png" alt="Abstract game project image">
                 <div class="project-details">
-                    <h4><i class="fas fa-hammer"></i> My Role: Developer & Concept Creator</h4>
+                    <h4><i class="fas fa-hammer"></i> My Role: Creator</h4>
                     <p>
                         A deeply personal and abstract game designed to reflect my life experiences and creative vision. 
-                        This project is currently in its early development stages, focusing on unique mechanics and artistic expression.
                     </p>
                     <div class="project-tech-tags">
                         <span class="tech-tag">C# .NET</span>
                         <span class="tech-tag">Unity / Godot</span>
                     </div>
                     <div class="project-buttons">
-                    <a href="" class="project-button disabled" title="Coming soon!">Learn More (Coming Soon)</a>
+                    <a href="" class="project-button disabled" title="Coming soon!">Learn More</a>
                 </div>
                 </div>
             </div>
 
-            <div class="project-card" data-category="SQL">
+            <div class="project-card completed" data-category="SQL">
                 <h3>Soil Analysis Database <span class="status-tag completed">Completed - March 2025</span></h3>
                 <img src="image/powerbi1.jpg" alt="Database Project PowerBI">
                 <div class="project-details">
-                    <h4><i class="fas fa-database"></i> My Role: Database Designer & Analyst</h4>
+                    <h4><i class="fas fa-database"></i> My Role: Data Analyst</h4>
                     <p>
-                        Design and implementation of a relational database dedicated to <strong>soil sampling analysis</strong>. 
-                        The goal was to structure complex data to enable efficient retrieval and visualization using <strong>Power BI</strong>.
+                        Relational database for soil sampling analysis & visualization using <strong>Power BI</strong>.
                     </p>
 
                     <div class="project-tech-tags">
                         <span class="tech-tag">SQL</span>
                         <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Data Modeling</span>
                     </div>
                     
                     <div class="project-buttons">
@@ -269,19 +266,18 @@
                 </div>
             </div>
 
-            <div class="project-card" data-category="C#">
-                <h3>University project - Loxam Management App <span class="status-tag completed">Completed - June 2025</span></h3>
+            <div class="project-card completed" data-category="C#">
+                <h3>Loxam Management App <span class="status-tag completed">Completed - June 2025</span></h3>
                 <img src="image/loxam.jpg" alt="Loxam Application">
                 <div class="project-details">
-                    <h4><i class="fas fa-desktop"></i> My Role: .NET Application Developer</h4>
+                    <h4><i class="fas fa-desktop"></i> My Role: .NET Developer</h4>
                     <p>
-                        Development of a robust desktop application based on the <strong>Loxam</strong> business model. 
-                        Built with <strong>WPF</strong> and <strong>C#</strong>, it features a user-friendly interface connected to a <strong>SQL database</strong> for equipment management.
+                        Desktop application based on the <strong>Loxam</strong> business model. 
+                        Built with <strong>WPF</strong> and <strong>C#</strong>.
                     </p>
 
                     <div class="project-tech-tags">
                         <span class="tech-tag">C# .NET</span>
-                        <span class="tech-tag">SQL</span>
                         <span class="tech-tag">WPF</span>
                     </div>
 
@@ -297,13 +293,12 @@
                 </div>
             </div>
 
-        </div> <p class="more-projects-info">(More projects are in the works...  Stay tuned!)</p>
+        </div> 
+        <p class="more-projects-info">(More projects are in the works...  Stay tuned!)</p>
     </section>
 
     <section id="contact">
         <h2>Get in Touch</h2>
-
-        
         <p class="section-intro">
             Have a question or want to work together? Send me a message!
         </p>
@@ -335,32 +330,28 @@
         </div>
  
     </section> 
+
     <footer id="footer">
-  
-        <section id="social">
-            <div class="social-media">
-                <h2>Social Media</h2>
-                <h3>Click and go</h3>
-                <a href="https://www.linkedin.com/in/ian-boultchynski-88209433a" target="_blank">
-                    <img src="image/linkedin.png" alt="LinkedIn" class="sm" id="lin">
-                </a>
-                <a href="https://github.com/ianboultchynski" target="_blank">
-                    <img src="image/github.png" alt="GitHub" class="sm" id="git">
-                </a>
-                <a href="https://www.instagram.com/ian.blt/" target="_blank">
-                    <img src="image/instagram.png" alt="Instagram" class="sm" id="in">
-                </a>
-                <a href="https://wa.me/33647961719" target="_blank">
-                    <img src="image/whatsapp.png" alt="WhatsApp" class="sm" id="wh">
-                </a>
+        <div class="social-media">
+            <h2>Social Media</h2>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/ian-boultchynski-88209433a" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/ianboultchynski" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/ian.blt/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/33647961719" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
-        </section>
+        </div>
         <p>&copy; 2025 Ian Boultchynski. All rights reserved.</p>
     </footer>
 
+    <a href="#home" id="backToTop" title="Haut de page"><i class="fas fa-arrow-up"></i></a>
+
     <div id="lightbox" class="lightbox">
-        <span class="close-btn">&times;</span>
-        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        <div class="lightbox-overlay"></div>
+    
+        <button class="close-btn" title="Close"><i class="fas fa-times"></i></button>
+        
+        <button class="nav-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
         
         <div class="lightbox-content">
             <img id="lightbox-img" src="" alt="Zoom projet">
@@ -368,7 +359,7 @@
             <div id="caption"></div>
         </div>
     
-        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+        <button class="nav-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
     </div>
 
     <script src="script.js" defer></script>

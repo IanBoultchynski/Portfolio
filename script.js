@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-//navigation rouge lu
+    // --- Navigation Active Link (ScrollSpy) ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('header nav a');
     const header = document.querySelector('header');
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveLink);
     updateActiveLink();
 
+    // --- Smooth Scroll pour les liens du menu ---
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -42,8 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
- //les filtre
+    // --- Filtres Projets ---
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
@@ -68,8 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-//Light
+    // --- Lightbox Logic ---
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxVideo = document.getElementById('lightbox-video');
@@ -100,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxImg.src = currentGallery[currentIndex].trim();
     };
 
-    // Gestionnaires d'événements
     const triggers = document.querySelectorAll('.lightbox-trigger');
 
     triggers.forEach(trigger => {
@@ -147,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Navigation Galerie
     prevBtn.addEventListener('click', () => {
         if (isGallery) {
             currentIndex = (currentIndex === 0) ? currentGallery.length - 1 : currentIndex - 1;
@@ -162,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Fermeture
     closeBtn.addEventListener('click', closeLightbox);
     
     lightbox.addEventListener('click', (e) => {
@@ -178,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-//ajax
+    // --- Form Ajax ---
     const form = document.getElementById("contactForm");
 
     async function handleSubmit(event) {
@@ -222,16 +218,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    form.addEventListener("submit", handleSubmit);
+    if(form) form.addEventListener("submit", handleSubmit);
+
+    // --- Header Mobile Menu ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    const navLinksMobile = document.querySelectorAll('nav ul li a');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('mobile-visible');
+            menuToggle.classList.toggle('is-active');
+        });
+    }
+
+    navLinksMobile.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navList.classList.contains('mobile-visible')) {
+                navList.classList.remove('mobile-visible');
+                menuToggle.classList.remove('is-active');
+            }
+        });
+    });
+
+    // --- Bouton Back To Top (Nouveau) ---
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
 
 });
 
-
+// --- Auto Scroll Images ---
 window.addEventListener('load', () => {
     const scrollContainer = document.querySelector('.image-scroll');
     
     if (scrollContainer) {
         scrollContainer.innerHTML += scrollContainer.innerHTML;
+        // On double encore pour être sûr que ça boucle sans trou sur les grands écrans
         scrollContainer.innerHTML += scrollContainer.innerHTML; 
 
         let scrollPos = 0; 
@@ -241,7 +270,6 @@ window.addEventListener('load', () => {
         function autoScroll() {
             scrollPos += vitesse;
 
-            // Calcul précis de la largeur d'un set d'images
             const originalChildrenCount = scrollContainer.children.length / 4; 
             let originalSetWidth = 0;
             
@@ -264,28 +292,3 @@ window.addEventListener('load', () => {
         autoScroll(); 
     }
 });
-
-
-//headerr
-
-const menuToggle = document.querySelector('.menu-toggle');
-    const navList = document.querySelector('nav ul');
-    const navLinksMobile = document.querySelectorAll('nav ul li a');
-
-    // Ouvrir / Fermer le menu
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('mobile-visible');
-            menuToggle.classList.toggle('is-active');
-        });
-    }
-
-    // Fermer le menu quand on clique sur un lien
-    navLinksMobile.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navList.classList.contains('mobile-visible')) {
-                navList.classList.remove('mobile-visible');
-                menuToggle.classList.remove('is-active');
-            }
-        });
-    });
