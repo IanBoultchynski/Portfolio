@@ -2,24 +2,28 @@
    1. VARIABLES & RESET
    ========================================= */
    :root {
-    --primary: #db5c5c;        
-    --primary-hover: #ff7676;  
-    --dark-bg: #1a1a1a;        
-    --card-bg: #252525;        
-    --light-bg: #f4f4f9;       
-    --text-main: #f1f1f1;      
-    --text-muted: #b0b0b0;     
-    --text-dark: #333333;      
+    /* Palette Principale - Couleurs de feu et de terre */
+    --primary: #f27121;         /* Orange Sunset (Chaud et dynamique) */
+    --primary-hover: #e94057;   /* Vers un rouge corail au survol */
     
-    /* Couleurs Status */
-    --status-completed: #28a745;
-    --status-ongoing: #ffc107;
+    /* Fonds - On remplace le noir pur par des tons chocolat/ardoise chaude */
+    --dark-bg: #1a1614;         /* Fond café très sombre */
+    --card-bg: #241f1c;         /* Gris chaud pour les cartes */
+    
+    /* Textes */
+    --text-main: #fdf5f0;       /* Blanc crème (plus doux pour les yeux) */
+    --text-muted: #bcaba0;      /* Beige grisé pour les infos secondaires */
+    --text-dark: #2a2420;       
+    
+    /* Status - Adaptés au thème chaud */
+    --status-completed: #4caf50; /* Vert feuille (naturel) */
+    --status-ongoing: #ffb300;    /* Jaune ambre */
 
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
-    --shadow-hover: 0 15px 40px rgba(219, 92, 92, 0.15);
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Ombres et Effets */
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 15px 40px rgba(242, 113, 33, 0.2); /* Lueur orange */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
